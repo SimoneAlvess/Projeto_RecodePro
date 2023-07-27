@@ -1,0 +1,92 @@
+/* Estilo corpo páginas */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Background Home */
+.bg-home {
+    background-image: url(imagens/img_background/background_páginas.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Fontes e outros estilos-home */
+
+h1 {
+    padding-top: 89px;
+}
+
+.img-altura {
+    height: 12rem;
+    
+}
+
+/* Background destinos e contato */
+.bg-destino-contato {
+    background-image: url(imagens/img_background/background_páginas.jpg);
+    background-size: cover;
+}
+
+/* Estilo formulario destinos */
+.form-check-label, .form-label, .form-control {
+    font-size: 13px; 
+}
+
+.form-control {
+    height: 30px; 
+}
+
+/* Background promoções */
+.bg-promo {
+    background-image: url(imagens/img_background/background_páginas.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 293px;
+}
+
+/* Margens e outros estilos-promoções */
+.p-h2 {
+    padding-top: 75px;
+}
+
+.card-text {
+    font-size: 11px;
+    color: #6e6e6e;
+    margin-top: -8px;
+}
+
+.icon {
+    color: #0d6efd;
+    margin-top: -8px;
+}
+
+.margin-p {
+    margin-top: 7px;
+    margin-bottom: -3px;
+}
+
+/* Fontes e outros estilos-contato */
+.fonte {
+    font-size: 13px !important;
+}
+
+.bi-style {
+        font-size: 35px;
+        color: #000000;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #0d6efd;
+    color: #fff;
+    padding: 9px 0;
+    bottom: 0;
+    font-size: 12px;
+}
