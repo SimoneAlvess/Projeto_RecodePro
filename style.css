@@ -15,17 +15,37 @@ main {
     background-image: url(imagens/img_background/background_páginas.jpg);
     background-size: cover;
     background-position: center;
+    height: 357px;
+}
+
+.bg-home-dois {
+    background-image: url(imagens/img_home/background_home_dois.jpg); 
+    max-height: 300rem; 
+    background-size: cover; 
+    background-position: center;
 }
 
 /* Fontes e outros estilos-home */
 
 h1 {
-    padding-top: 89px;
+    padding-top: 98px;
 }
 
-.img-altura {
-    height: 12rem;
-    
+.bi-icon {
+    font-size: 2rem;
+    color: #95b7ff;
+}
+
+.bi-card {
+    font-size: 12px;
+    color: #0d6efd;
+}
+.font-small {
+    font-size: 11px;
+}
+
+.font-media {
+    font-size: 12px;
 }
 
 /* Background destinos e contato */
@@ -48,12 +68,12 @@ h1 {
     background-image: url(imagens/img_background/background_páginas.jpg);
     background-size: cover;
     background-position: center;
-    height: 293px;
+    height: 299px;
 }
 
 /* Margens e outros estilos-promoções */
 .p-h2 {
-    padding-top: 75px;
+    padding: 73px;
 }
 
 .card-text {

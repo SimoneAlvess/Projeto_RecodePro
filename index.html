@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
@@ -47,14 +47,231 @@
     </header>
     <!-- Fim menu -->
     <!-- Início  -->
-    <main class="bg-home">
+    <main>
         <section>
-            <div class="container-fluid text-white">
-                <div class="container text-white text-center">
+            <div class="container-fluid text-white bg-home">
+                <div class="container text-center">
                     <h1>Bem-vindo(a) à DestinoFácil</h1>
-                    <p>Levamos você ao destino dos seus sonhos! <br>
-                       Pacotes Nacionas e Internacionais com 20% a 30% de desconto.
+                    <p>Sua porta de entrada para um mundo de possibilidades e descobertas 
+                        <br>Transformando sonhos em destinos!
                     </p>
+                </div>
+            </div>
+
+            <div class="container-fluid bg-primary text-white">
+                <div class="container py-3">
+                    <div class="row text-center">
+                        <div class="col-md-3">
+                            <i class="bi bi-award-fill bi-icon"></i>
+                            <h6>Garantia e Satisfação</h6>
+                            <p class="font-media">Garantia de satisfação em cada viagem. Descubra experiências
+                                inesquecíveis com nossa agência.</p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <i class="bi bi-people-fill bi-icon"></i>
+                            <h6>Atendimento Personalizado</h6>
+                            <p class="font-media">Oferecemos atendimento personalizado para tornar cada viagem única.
+                            </p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <i class="bi bi-headset bi-icon"></i>
+                            <h6>Suporte Durante a Viagem</h6>
+                            <p class="font-media">Suporte em toda viagem. Sua tranquilidade é nossa prioridade</p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <i class="bi bi-tags-fill bi-icon"></i>
+                            <h6>Preços Competitivos</h6>
+                            <p class="font-media">Preços competitivos para viagens incríveis. Descubra o mundo sem gastar muito.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Início cards -->
+            <div class="container mt-3 py-4">
+                <h4 class="pb-2 mb-3 border-bottom">Destinos internacionais mais populares</h4>
+                <div class="row row-cols-1 row-cols-md-4 g-2">
+                    <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="imagens/img_home/paris_home.jpg" class="card-img-top" alt="paris">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center pb-2">
+                                    <i class="bi bi-geo-alt-fill me-1 icon"></i>
+                                    <h6 class="card-title">Paris</h6>
+                                </div>
+                                <p class="card-text">A cidade dos apaixonados e dos sonhadores, onde a atmosfera romântica flui ao longo das margens do rio Sena.</p>
+                            </div>
+                            <div class="card-footer d-flex align-items-center pt-0">
+                                <small class="text-muted font-small pt-1">Confira nossas ofertas</small>
+                                <a href="promocoes.html"><i class="bi bi-box-arrow-up-right ms-2 bi-card"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="imagens/img_home/orlando_home.jpg" class="card-img-top" alt="orlando">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center pb-2">
+                                    <i class="bi bi-geo-alt-fill me-1 icon"></i>
+                                    <h6 class="card-title">Orlando</h6>
+                                </div>
+                                <p class="card-text">Um mundo de maravilhas onde a imaginação ganha vida, e a alegria contagia cada momento.</p>
+                            </div>
+                            <div class="card-footer d-flex align-items-center pt-0">
+                                <small class="text-muted font-small pt-1">Confira nossas ofertas</small>
+                                <a href="promocoes.html"><i class="bi bi-box-arrow-up-right ms-2 bi-card"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="imagens/img_home/roma_home.jpg" class="card-img-top" alt="roma">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center pb-2">
+                                    <i class="bi bi-geo-alt-fill me-1 icon"></i>
+                                    <h6 class="card-title">Roma</h6>
+                                </div>
+                                <p class="card-text">A cidade eterna e imortal, onde cada rua conta uma história milenar, cada ruína revela a grandeza do passado.</p>
+                            </div>
+                            <div class="card-footer d-flex align-items-center pt-0">
+                                <small class="text-muted font-small pt-1">Confira nossas ofertas</small>
+                                <a href="promocoes.html"><i class="bi bi-box-arrow-up-right ms-2 bi-card"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="imagens/img_home/novaiorque_home.jpg" class="card-img-top" alt="novaiorque">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center pb-2">
+                                    <i class="bi bi-geo-alt-fill me-1 icon"></i>
+                                    <h6 class="card-title">Nova York</h6>
+                                </div>
+                                <p class="card-text">A cidade que nunca dorme, as luzes cintilam como estrelas e a energia vibrante pulsa pelas ruas. </p>
+                            </div>
+                            <div class="card-footer d-flex align-items-center pt-0">
+                                <small class="text-muted font-small pt-1">Confira nossas ofertas</small>
+                                <a href="promocoes.html"><i class="bi bi-box-arrow-up-right ms-2 bi-card"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container py-3">
+                <h4 class="pb-2 mb-3 border-bottom">Destinos nacionais mais populares</h4>
+                <div class="row row-cols-1 row-cols-md-4 g-2">
+                    <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="imagens/img_home/riodejaneiro_home.jpg" class="card-img-top" alt="riodejaneiro">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center pb-2">
+                                    <i class="bi bi-geo-alt-fill me-1 icon"></i>
+                                    <h6 class="card-title">Rio de Janeiro</h6>
+                                </div>
+                                <p class="card-text">A cidade maravilhosa, onde a natureza exuberante encontra a energia contagiante da cultura e da diversidade.</p>
+                            </div>
+                            <div class="card-footer d-flex align-items-center pt-0">
+                                <small class="text-muted font-small pt-1">Confira nossas ofertas</small>
+                                <a href="promocoes.html"><i class="bi bi-box-arrow-up-right ms-2 bi-card"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="imagens/img_home/bonito_home.JPG" class="card-img-top" alt="bonito">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center pb-2">
+                                    <i class="bi bi-geo-alt-fill me-1 icon"></i>
+                                    <h6 class="card-title">Bonito</h6>
+                                </div>
+                                <p class="card-text">Um paraíso terrestre no coração do Brasil, onde as águas cristalinas revelam a vida subaquática em toda a sua beleza.</p>
+                            </div>
+                            <div class="card-footer d-flex align-items-center pt-0">
+                                <small class="text-muted font-small pt-1">Confira nossas ofertas</small>
+                                <a href="promocoes.html"><i class="bi bi-box-arrow-up-right ms-2 bi-card"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="imagens/img_home/maragogi_home.jpg" class="card-img-top" alt="maragogi">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center pb-2">
+                                    <i class="bi bi-geo-alt-fill me-1 icon"></i>
+                                    <h6 class="card-title">Maragogi</h6>
+                                </div>
+                                <p class="card-text">Um tesouro escondido no litoral nordeste do Brasil, onde o azul turquesa do mar se mistura com a brancura das areias.</p>
+                            </div>
+                            <div class="card-footer d-flex align-items-center pt-0">
+                                <small class="text-muted font-small pt-1">Confira nossas ofertas</small>
+                                <a href="promocoes.html"><i class="bi bi-box-arrow-up-right ms-2 bi-card"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow">
+                            <img src="imagens/img_home/gramado_home.jpg" class="card-img-top" alt="gramado">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center pb-2">
+                                    <i class="bi bi-geo-alt-fill me-1 icon"></i>
+                                    <h6 class="card-title">Gramado</h6>
+                                </div>
+                                <p class="card-text">Um encantador refúgio nas montanhas do sul do Brasil, onde a natureza se une à arquitetura europeia.</p>
+                            </div>
+                            <div class="card-footer d-flex align-items-center pt-0">
+                                <small class="text-muted font-small pt-1">Confira nossas ofertas</small>
+                                <a href="promocoes.html"><i class="bi bi-box-arrow-up-right ms-2 bi-card"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim cards -->
+            <div class="container-fluid bg-primary mt-4">
+                <div class="container py-4 text-center text-white">
+                    <i class="bi bi-building-check fs-2"></i>
+                    <h4>Sobre Nós</h4>
+                    <p class="font-media">À DestinoFácil tem uma vasta experiência no setor. Ao longo dos anos, acumulamos conhecimento e expertise para garantir que cada viagem seja cuidadosamente planejada e executada com excelência. Nossa equipe dedicada e apaixonada por viagens está pronta para tornar suas jornadas memoráveis e repletas de momentos únicos, fazendo com que cada destino seja uma experiência verdadeiramente inesquecível.</p>
+                </div>
+            </div>
+
+            <div class="container-fluid text-white bg-home-dois">
+                <div class="container py-5">
+                    <div class="row">
+                        <div class="col-md-7 pb-2">
+                            <h2>Fique por dentro das novidades e ofertas da DestinoFácil</h3>
+                                <p>Explore o mundo com facilidade!
+                                    <br>Nossa missão é tornar cada viagem uma jornada
+                                    inesquecível. Viajar nunca foi tão fácil e emocionante!
+                                </p>
+                        </div>
+
+                        <div class="col-md-5 py-4 bg-primary shadow rounded ">
+                            <h4 class="text-center pb-3">Cadastre-se</h4>
+                            <form method="post">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Nome">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Email">
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <button class="btn btn-light text-primary" type="submit">Cadastrar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -62,15 +279,19 @@
     <!-- Fim  -->
     <!-- Início do rodapé -->
     <footer>
-        <div class="container text-center">
+        <div class="container pt-2 d-flex justify-content-between align-items-center">
             <p>&copy; 2023 DestinoFácil. Todos os direitos reservados.</p>
+            <div class="d-flex align-items-center pb-3">
+                <i class="bi bi-facebook fs-6 pe-2"></i>
+                <i class="bi bi-instagram fs-6 pe-2"></i>
+                <i class="bi bi-twitter fs-6"></i>
+            </div>
         </div>
     </footer>
     <!-- Fim do rodapé -->
     <!-- javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 
 </html>
