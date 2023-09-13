@@ -26,7 +26,6 @@ main {
 }
 
 /* Fontes e outros estilos-home */
-
 h1 {
     padding-top: 98px;
 }
@@ -102,11 +101,72 @@ h1 {
         color: #000000;
 }
 
+/* Estilo página login-cadastro */
+.bg-login-cadastro {
+    background-image: url(imagens/img_background/background_páginas.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.customRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;  
+    padding: 12px !important; 
+}
+
+#linkCadastro, #linkLogin  {
+    text-decoration: none;
+}
+
+.custom-link{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    text-decoration: none;
+}
+
+.bg-form {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #7b7b7b;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.eye-icon:hover {
+    color: #0d6efd;
+}
+
+.linkSession{
+ padding-top: 1% !important;
+ border-radius: 15px;
+ transition: background-color 0.3s, color 0.3s !important;
+}
+
+.linkSession:hover {
+   background-color: #ffffff !important;
+   color: #0d6efd!important;
+   border: none !important;
+}
+
 /* Estilo do rodapé */
-footer {
+.custom-footer {
     background-color: #0d6efd;
     color: #fff;
-    padding: 9px 0;
-    bottom: 0;
-    font-size: 12px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 13px;
 }
+
+
+
