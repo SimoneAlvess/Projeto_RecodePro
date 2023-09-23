@@ -10,6 +10,23 @@ main {
     flex-grow: 1;
 }
 
+/* Estilos Barra de Navegação */
+.linkSession {
+    padding-top: 3px !important;
+    border-radius: 15px !important;
+    transition: background-color 0.3s, color 0.3s !important;
+}
+
+.linkSession:hover {
+    background-color: #ffffff !important;
+    color: #0d6efd !important;
+    border: none !important;
+}
+
+.nav-link{
+    padding-left: 15px !important;
+}
+
 /* Background Home */
 .bg-home {
     background-image: url(imagens/img_background/background_páginas.jpg);
@@ -19,9 +36,9 @@ main {
 }
 
 .bg-home-dois {
-    background-image: url(imagens/img_home/background_home_dois.jpg); 
-    max-height: 300rem; 
-    background-size: cover; 
+    background-image: url(imagens/img_home/background_home_dois.jpg);
+    max-height: 300rem;
+    background-size: cover;
     background-position: center;
 }
 
@@ -39,6 +56,7 @@ h1 {
     font-size: 12px;
     color: #0d6efd;
 }
+
 .font-small {
     font-size: 11px;
 }
@@ -54,12 +72,14 @@ h1 {
 }
 
 /* Estilo formulario destinos */
-.form-check-label, .form-label, .form-control {
-    font-size: 13px; 
+.form-check-label,
+.form-label,
+.form-control {
+    font-size: 13px;
 }
 
 .form-control {
-    height: 30px; 
+    height: 30px;
 }
 
 /* Background promoções */
@@ -97,8 +117,8 @@ h1 {
 }
 
 .bi-style {
-        font-size: 35px;
-        color: #000000;
+    font-size: 35px;
+    color: #000000;
 }
 
 /* Estilo página login-cadastro */
@@ -112,15 +132,16 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;  
-    padding: 12px !important; 
+    min-height: 100vh;
+    padding: 12px !important;
 }
 
-#linkCadastro, #linkLogin  {
+#linkCadastro,
+#linkLogin {
     text-decoration: none;
 }
 
-.custom-link{
+.custom-link {
     display: flex;
     justify-content: center;
     padding-top: 10px;
@@ -147,18 +168,6 @@ h1 {
     color: #0d6efd;
 }
 
-.linkSession{
- padding-top: 1% !important;
- border-radius: 15px;
- transition: background-color 0.3s, color 0.3s !important;
-}
-
-.linkSession:hover {
-   background-color: #ffffff !important;
-   color: #0d6efd!important;
-   border: none !important;
-}
-
 /* Estilo do rodapé */
 .custom-footer {
     background-color: #0d6efd;
@@ -167,6 +176,3 @@ h1 {
     padding-top: 10px;
     font-size: 13px;
 }
-
-
-
