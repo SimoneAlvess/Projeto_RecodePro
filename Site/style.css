@@ -15,7 +15,6 @@ main {
     padding-top: 3px !important;
     border-radius: 15px !important;
     transition: background-color 0.3s, color 0.3s !important;
-    padding-right: 15px !important;
 }
 
 .linkSession:hover {
@@ -26,6 +25,7 @@ main {
 
 .nav-link{
     padding-left: 15px !important;
+    padding-right: 15px !important;
 }
 
 /* Background Home */

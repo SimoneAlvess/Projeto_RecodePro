@@ -2,7 +2,8 @@
 create database destinofacil;
 use destinofacil;
 
-/* Tabela Cliente */
+/* Criação de Tabelas */
+# Tabela Cliente
 create table clientes (
 id_cliente int primary key auto_increment not null,
 nome varchar(60),
@@ -10,7 +11,7 @@ email varchar(60),
 senha varchar(20)
 );
 
-/* Tabela Destino */
+# Tabela Destino 
 create table destinos (
 id_destino int primary key auto_increment not null,
 destino varchar(100),
@@ -20,7 +21,7 @@ promocao_id int,
 foreign key (promocao_id) references promocao (id_promocao)
 );
 
-/* Tabela Promoção */
+# Tabela Promoção 
 create table promocao (
 id_promocao int primary key auto_increment not null,
 desconto decimal(5,2),
@@ -28,7 +29,7 @@ validade_promocao datetime,
 pacote varchar(50)
 );
 
-/* Tabela Compra - Relacionamento */
+# Tabela Compra - Relacionamento
 create table compra (
 id_compra int primary key auto_increment not null,
 data_hora_viagem datetime,
@@ -39,25 +40,6 @@ destino_id int,
 foreign key (cliente_id) references clientes (id_cliente),
 foreign key (destino_id) references destinos (id_destino)
 );
-
-/* Seleção Tabelas */
-select * from clientes;
-select * from destinos;
-select * from promocoes;
-select * from compra;
-
-/* Seleção Personalizada */
-# Compra - Cliente
-select c.id_compra, cl.nome as nome_cliente, d.destino, c.forma_pagamento, c.data_hora_viagem from compra as c 
-join clientes as cl on c.cliente_id = cl.id_cliente
-join destinos  as d on c.destino_id = d.id_destino
-order by nome_cliente;
-
-# Destino - Promoção
-select d.destino, d.preco, p.desconto, d.transporte, p.pacote, p.validade_promocao
-from destinos as d
-join promocoes as p on d.promocao_id = p.id_promocao
-order by destino;
 
 /* Inserção de Dados */
 # Clientes
@@ -115,5 +97,53 @@ insert into destinofacil.compra (data_hora_viagem, forma_pagamento, cliente_id, 
 ('2024-03-15 15:20:00', 'Credito', 6, 25),
 ('2023-09-16 11:00:00', 'Debito', 7, 23);
 
+/* Seleção Tabelas */
+select * from clientes;
+select * from destinos;
+select * from promocoes;
+select * from compra;
 
+/* Seleção Personalizada */
+# Compra - Cliente
+select c.id_compra, cl.nome as nome_cliente, d.destino, c.forma_pagamento, c.data_hora_viagem from compra as c 
+join clientes as cl on c.cliente_id = cl.id_cliente
+join destinos  as d on c.destino_id = d.id_destino
+order by nome_cliente;
+
+# Destino - Promoção
+select d.destino, d.preco, p.desconto, d.transporte, p.pacote, p.validade_promocao
+from destinos as d
+join promocoes as p on d.promocao_id = p.id_promocao
+order by destino;
+
+/* Atualização de Dados */
+# Clientes
+update destinofacil.clientes set nome = 'Bruna da Silva', email = 'brunasilva@hotmail.com', senha = '2508' where (id_cliente = '6');
+update destinofacil.clientes set nome = 'Silvana Santos', email = 'silvanasantos@hotmail.com', senha = '6743' where (id_cliente = '7');
+update destinofacil.clientes set nome = 'Miria Alves', email = 'miriaalves@gmaill.com', senha = '1534' where (id_cliente = '8');
+
+# Destinos
+update destinofacil.destinos set destino = 'São Paulo', preco = '950.00' where (id_destino = '1');
+update destinofacil.destinos set destino = 'Fortaleza', preco = '690.00' where (id_destino = '14');
+
+# Compra
+update destinofacil.compra set data_hora_viagem = '2023-12-25 10:30:00', forma_pagamento = 'Credito', cliente_id = '10', destino_id = '27' where (id_compra = '6');
+update destinofacil.compra set data_hora_viagem = '2023-10-15 11:00:00', forma_pagamento = 'Debito', cliente_id = '6', destino_id = '23' where (id_compra = '7');
+
+# Promoções
+update destinofacil.promocoes set desconto = '0.20', validade_promocao = '2023-09-20 17:00:00', pacote = 'Internacional' where (id_promocao = '2');
+update destinofacil.promocoes set desconto = '0.25', validade_promocao = '2023-05-21 09:40:00', pacote = 'Nacional' where (id_promocao = '7');
+
+/* Exclusão de Dados */
+# Clientes 
+delete from clientes where id_cliente = 6;
+
+# Destinos
+delete from destinos where id_destino = 27;
+
+# Compra
+delete from compra where id_compra = 9;
+
+# Promoções
+delete from promocoes where id_promocao = 4;
 
