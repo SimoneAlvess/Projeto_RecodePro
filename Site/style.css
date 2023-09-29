@@ -11,19 +11,11 @@ main {
 }
 
 /* Estilos Barra de Navegação */
-.linkSession {
-    padding-top: 3px !important;
-    border-radius: 15px !important;
-    transition: background-color 0.3s, color 0.3s !important;
+.CustomDropdown {
+    padding: 0px !important;
 }
 
-.linkSession:hover {
-    background-color: #ffffff !important;
-    color: #0d6efd !important;
-    border: none !important;
-}
-
-.nav-link{
+.nav-link {
     padding-left: 15px !important;
     padding-right: 15px !important;
 }
@@ -167,6 +159,14 @@ h1 {
 
 .eye-icon:hover {
     color: #0d6efd;
+}
+
+/* Estilos cadastro compra */
+.SectionCompra {
+    background-image: url(imagens/img_background/background_cadastros.jpg);
+    background-size: cover;
+    color: white;
+    padding: 130px 0px 25px;
 }
 
 /* Estilo do rodapé */

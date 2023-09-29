@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Compra - DestinoFácil</title>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <!-- Bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="imagens/icon_logo_destinofacil.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- Menu de navegação -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"> <img src="imagens/logo_destinofacil.png" alt="logo" width="33"
+            height="31" class="d-inline-block align-text-top"> DestinoFácil</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="cadastro-destino.html">Cadastrar Destino</a>
+            <a class="nav-link active" href="cadastro-compra.html">Cadastrar Compra</a>
+            <a class="nav-link" href="cadastro-promoçao.html">Cadastrar Promoção</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Fim menu -->
+
+  <main>
+    <section class="SectionCompra">
+      <div class="container">
+        <h2>Cadastro Compra</h2>
+      </div>
+    </section>
+
+    <section>
+      <div class="container py-4">
+        <form>
+          <div class="form-floating mt-4 mb-3">
+            <input class="form-control" type="text" id="inputCliente" placeholder="#" required>
+            <label for="inputCliente">Cliente</label>
+          </div>
+          <div class="form-floating mt-4 mb-3">
+            <input class="form-control" type="text" id="inputDestino" placeholder="#" required>
+            <label for="inputDestino">Destino</label>
+          </div>
+          <div class="form-floating mt-4 mb-3">
+            <input class="form-control" type="datetime-local" id="inputData" placeholder="DD/MM/AAAA HH:MM:SS" required>
+            <label for="inputData">Data/Hora da Viagem</label>
+          </div>
+          <div class="form-floating mt-4 mb-4">
+            <input class="form-control" type="text" id="inputPagamento" placeholder="#" required>
+            <label for="inputPagamento">Forma de Pagamento</label>
+          </div>
+          <div class="d-flex gap-3 mt-4">
+            <button class="btn btn-primary mb-3" type="submit">Cadastrar</button>
+            <button class="btn btn-primary mb-3" type="submit">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Início do rodapé -->
+  <footer class="custom-footer">
+    <div class="container pt-2 d-flex justify-content-between align-items-center">
+      <p>&copy; 2023 DestinoFácil. Todos os direitos reservados.</p>
+      <div class="d-flex align-items-center pb-3">
+        <i class="bi bi-facebook fs-6 pe-2"></i>
+        <i class="bi bi-instagram fs-6 pe-2"></i>
+        <i class="bi bi-twitter fs-6"></i>
+      </div>
+    </div>
+  </footer>
+  <!-- Fim do rodapé -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
