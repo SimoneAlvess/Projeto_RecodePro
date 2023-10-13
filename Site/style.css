@@ -50,8 +50,8 @@ main {
 }
 
 /** Fontes e outros estilos-home **/
-h1 {
-    padding-top: 98px;
+.customFont {
+    padding: 98px;
 }
 
 .bi-icon {
