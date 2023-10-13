@@ -1,4 +1,22 @@
-/* Estilo corpo páginas */
+/** Fonts Google **/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/** Estilo corpo páginas **/
+:root {
+    --text-color: white;
+    --icon-color: #0d6efd;
+    --bg-url: url(imagens/img_background/background_páginas.jpg);
+    --bg-forms-url: url(imagens/img_background/background_cadastros.jpg);
+    --bg-url-two: url(imagens/img_home/background_home_dois.jpg);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -10,7 +28,7 @@ main {
     flex-grow: 1;
 }
 
-/* Estilos Barra de Navegação */
+/** Estilos Barra de Navegação **/
 .CustomDropdown {
     padding: 0px !important;
 }
@@ -20,22 +38,18 @@ main {
     padding-right: 15px !important;
 }
 
-/* Background Home */
+/** Background Home **/
 .bg-home {
-    background-image: url(imagens/img_background/background_páginas.jpg);
-    background-size: cover;
-    background-position: center;
+    background: var(--bg-url) center/cover;
     height: 357px;
 }
 
 .bg-home-dois {
-    background-image: url(imagens/img_home/background_home_dois.jpg);
+    background: var(--bg-url-two) center/cover;
     max-height: 300rem;
-    background-size: cover;
-    background-position: center;
 }
 
-/* Fontes e outros estilos-home */
+/** Fontes e outros estilos-home **/
 h1 {
     padding-top: 98px;
 }
@@ -47,7 +61,7 @@ h1 {
 
 .bi-card {
     font-size: 12px;
-    color: #0d6efd;
+    color: var(--icon-color);
 }
 
 .font-small {
@@ -58,13 +72,12 @@ h1 {
     font-size: 12px;
 }
 
-/* Background destinos e contato */
+/** Background destinos e contato **/
 .bg-destino-contato {
-    background-image: url(imagens/img_background/background_páginas.jpg);
-    background-size: cover;
+    background: var(--bg-url) center/cover;
 }
 
-/* Estilo formulario destinos */
+/** Estilo formulario destinos **/
 .form-check-label,
 .form-label,
 .form-control {
@@ -75,15 +88,13 @@ h1 {
     height: 30px;
 }
 
-/* Background promoções */
+/** Background promoções **/
 .bg-promo {
-    background-image: url(imagens/img_background/background_páginas.jpg);
-    background-size: cover;
-    background-position: center;
+    background: var(--bg-url) center/cover;
     height: 299px;
 }
 
-/* Margens e outros estilos-promoções */
+/** Margens e outros estilos-promoções **/
 .p-h2 {
     padding: 73px;
 }
@@ -95,16 +106,15 @@ h1 {
 }
 
 .icon {
-    color: #0d6efd;
+    color: var(--icon-color);
     margin-top: -8px;
 }
 
-.margin-p {
-    margin-top: 7px;
-    margin-bottom: -3px;
+.marginParagraph {
+    margin: 7px 0 -3px;
 }
 
-/* Fontes e outros estilos-contato */
+/** Fontes e outros estilos-contato **/
 .fonte {
     font-size: 13px !important;
 }
@@ -114,11 +124,9 @@ h1 {
     color: #000000;
 }
 
-/* Estilo página login-cadastro */
-.bg-login-cadastro {
-    background-image: url(imagens/img_background/background_páginas.jpg);
-    background-position: center;
-    background-size: cover;
+/** Estilo página login-cadastro **/
+.bgFormLogin {
+    background: var(--bg-url) center/cover;
 }
 
 .customRow {
@@ -141,7 +149,7 @@ h1 {
     text-decoration: none;
 }
 
-.bg-form {
+.bgLoginCadastro {
     background-color: rgba(255, 255, 255, 0.8) !important;
     position: relative;
 }
@@ -158,21 +166,20 @@ h1 {
 }
 
 .eye-icon:hover {
-    color: #0d6efd;
+    color: var(--icon-color);
 }
 
-/* Estilos cadastro compra */
-.SectionCompra {
-    background-image: url(imagens/img_background/background_cadastros.jpg);
-    background-size: cover;
-    color: white;
+/** Estilos cadastro compra **/
+.bgForms {
+    background: var(--bg-forms-url) top/cover;
+    color: var(--text-color);
     padding: 130px 0px 25px;
 }
 
-/* Estilo do rodapé */
+/** Estilo do rodapé **/
 .custom-footer {
     background-color: #0d6efd;
-    color: #fff;
+    color: var(--text-color);
     padding-bottom: 10px;
     padding-top: 10px;
     font-size: 13px;
