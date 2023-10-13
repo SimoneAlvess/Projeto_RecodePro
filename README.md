@@ -28,6 +28,3 @@ O DestinoFácil é um site de agência de viagens.
 
 - [Acesse o projeto finalizado, online](https://simonealvess.github.io/Projeto_RecodePro/Site/)
 
----
-
- Projeto desenvolvido no Programa [Recode Pro 2023](https://recodepro.org.br/)
