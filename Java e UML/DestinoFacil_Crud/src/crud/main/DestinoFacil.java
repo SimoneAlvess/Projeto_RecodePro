@@ -294,7 +294,7 @@ public class DestinoFacil {
                     switch (tblSelecionar) {
                         case 1:
                             System.out.println("-----------------------------");
-                            System.out.println("       Listar Clientes       ");
+                            System.out.println("        Lista Clientes       ");
                             System.out.println("-----------------------------");
                             for (Clientes cliente : clientesDAO.getAllClientes()) {
                                 System.out.println("ID do cliente: " + cliente.getIdCliente());
@@ -307,7 +307,7 @@ public class DestinoFacil {
 
                         case 2:
                             System.out.println("-----------------------------");
-                            System.out.println("       Listar Destinos       ");
+                            System.out.println("        Lista Destinos       ");
                             System.out.println("-----------------------------");
                             for (Destinos destino : destinosDAO.getAllDestinos()) {
                                 System.out.println("ID do destino: " + destino.getIdDestino());
@@ -321,7 +321,7 @@ public class DestinoFacil {
 
                         case 3:
                             System.out.println("-----------------------------");
-                            System.out.println("       Listar Promoções      ");
+                            System.out.println("        Lista Promoções      ");
                             System.out.println("-----------------------------");
                             for (Promocoes promocao : promocoesDAO.getAllPromocao()) {
                                 System.out.println("ID da Promoção: " + promocao.getIdPromocao());
@@ -334,7 +334,7 @@ public class DestinoFacil {
 
                         case 4:
                             System.out.println("-----------------------------");
-                            System.out.println("        Listar Compra        ");
+                            System.out.println("         Lista Compra        ");
                             System.out.println("-----------------------------");
                             for (Compra compra : compraDAO.getAllCompra()) {
                                 System.out.println("ID da compra: " + compra.getIdCompra());
