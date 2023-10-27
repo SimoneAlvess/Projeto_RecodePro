@@ -18,11 +18,12 @@ destino varchar(100),
 preco decimal (10, 2),
 transporte varchar(50),
 promocao_id int,
-foreign key (promocao_id) references promocao (id_promocao)
+foreign key (promocao_id) references promocao (id_promocao),
+preco_total decimal (10,2)
 );
 
 # Tabela Promoção 
-create table promocao (
+create table promocoes (
 id_promocao int primary key auto_increment not null,
 desconto decimal(5,2),
 validade_promocao datetime,
@@ -34,7 +35,6 @@ create table compra (
 id_compra int primary key auto_increment not null,
 data_hora_viagem datetime,
 forma_pagamento varchar(50),
-status_compra boolean,
 cliente_id int,
 destino_id int,
 foreign key (cliente_id) references clientes (id_cliente),
@@ -111,7 +111,7 @@ join destinos  as d on c.destino_id = d.id_destino
 order by nome_cliente;
 
 # Destino - Promoção
-select d.destino, d.preco, p.desconto, d.transporte, p.pacote, p.validade_promocao
+select d.id_destino, d.destino, d.preco, p.desconto, d.transporte, p.pacote, p.validade_promocao
 from destinos as d
 join promocoes as p on d.promocao_id = p.id_promocao
 order by destino;

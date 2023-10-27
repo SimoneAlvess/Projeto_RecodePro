@@ -1,0 +1,99 @@
+/** Fonts Google **/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/** Estilo corpo páginas **/
+:root {
+    --text-color-white: white;
+    --text-color-black:black;
+    --icon-color: #0d6efd;
+    --bg-register-url: url(../imagens/background_cadastros.jpg);
+    --footer-color: #0d6efd;
+    --button-color: #0d6efd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/** Estilos cadastros **/
+.bgForms {
+   	background: var(--bg-register-url) top/cover;
+    color: var(--text-color-white);
+    padding: 120px 37px 25px !important;
+}
+
+/**Estilos buttons**/
+.btnGroup {
+	background-color: var(--button-color) !important;
+	color: var(--text-color-white)  !important;
+	border-radius: 12px !important;
+	border: 0px !important;
+	padding: 9px 20px !important;
+}
+
+.btnGroupTwo {
+	background-color: red !important;
+	color: var(--text-color-white)  !important;
+	border-radius: 12px !important;
+	border: 0px !important;
+	padding: 9px 15px !important;
+}
+
+.btnGroupTwo:hover {
+	background-color:rgb(255, 32, 32) !important;
+}
+
+.btnGroup:hover {
+	background-color:dodgerblue !important;
+}
+
+.iconDelete {
+	color: red !important;	
+}
+
+.iconEdit {
+	color: var(--icon-color);
+	cursor: pointer;
+}
+
+.iconDelete:hover {
+	color:indianred !important;	
+}
+
+.iconEdit:hover {
+	color: dodgerblue;
+}
+
+.customFooter {
+	background-color: var(--footer-color);
+	color: var(--text-color-white);
+	padding: 17px 0 10px 0;
+}
+
+.iconSocial:hover {
+	color: rgb(119, 187, 255) !important;
+	cursor: pointer;
+}
+
+/** Estilo Home **/
+.bgHome {
+	background: var(--bg-register-url) top/cover;
+	color: var(--text-color-white);
+}
+
+
+
+

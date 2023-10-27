@@ -169,7 +169,7 @@ main {
     color: var(--icon-color);
 }
 
-/** Estilos cadastro compra **/
+/** Estilos cadastros **/
 .bgForms {
     background: var(--bg-forms-url) top/cover;
     color: var(--text-color);
