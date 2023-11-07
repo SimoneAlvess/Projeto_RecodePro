@@ -20,7 +20,7 @@
   <!-- Início Navbar -->
   <header>
     <jsp:include page="./components/menu.jsp">
-      <jsp:param name="home" value="./index.jsp" />
+      <jsp:param name="home" value="./" />
       <jsp:param name="cliente" value="cliente" />
       <jsp:param name="destino" value="destino" />
       <jsp:param name="promocao" value="promocao" />
