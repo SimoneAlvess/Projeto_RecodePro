@@ -1,0 +1,169 @@
+/** Fonts Google **/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/** Estilo corpo páginas **/
+:root {
+	--text-color-white: white;
+	--text-color-black: black;
+	--text-color-blue: #0d6efd;
+	--icon-color: #0d6efd;
+	--bg-color: #0d6efd;
+	--bg-color-Two: rgb(107, 166, 254);
+	--bg-register-url: url(../imagens/background_cadastros.jpg);
+	--footer-color: #0d6efd;
+	--button-color: #0d6efd;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+main {
+	flex-grow: 1;
+}
+
+/** Estilo Navbar **/
+.nav-link {
+	padding-right: 13px !important;
+}
+
+/** Estilos cadastros-login **/
+.bgForms {
+	background: var(--bg-register-url) top/cover;
+	color: var(--text-color-white);
+	padding: 120px 37px 25px !important;
+}
+
+.bgRegisterLogin {
+	background: linear-gradient(to right, var(--bg-color), var(--bg-color-Two)) !important;
+	overflow: hidden !important;
+}
+
+.area-register {
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.register {
+	background: white;
+	width: 375px;
+	min-height: 440px;
+	padding: 37px 50px 35px 50px;
+	border-radius: 15px;
+}
+
+.register form {
+	display: flex;
+	flex-direction: column;
+}
+
+.register label {
+	font-weight: 500;
+	font-size: 15px;
+}
+
+.formStyle {
+	border-radius: 12px !important;
+	padding: 10px 37px !important;
+}
+
+.input-container {
+	position: relative;
+}
+
+.input-container i {
+	position: absolute;
+	top: 35px;
+	left: 12px;
+	color: var(--text-color-blue);
+}
+
+/**Estilos buttons**/
+.btnGroup {
+	background-color: var(--button-color) !important;
+	color: var(--text-color-white) !important;
+	border-radius: 12px !important;
+	border: 0px !important;
+	padding: 9px 20px !important;
+}
+
+.btnGroup:hover {
+	background-color: dodgerblue !important;
+}
+
+.btnGroupThree {
+	background: linear-gradient(to right, var(--bg-color), var(--bg-color-Two)) !important;
+	color: var(--text-color-white) !important;
+	border-radius: 12px !important;
+	border: 0px !important;
+	padding: 9px 20px !important;
+}
+
+.btnGroupThree:hover {
+	background: linear-gradient(to right, var(--bg-color-Two), var(--bg-color)) !important;
+}
+
+.btnGroupFor {
+	color: var(--text-color-blue) !important;
+	background-color: white !important;
+	font-weight: 500 !important;
+}
+
+.btnGroupFor:hover {
+	background-color: rgb(218, 233, 254) !important;
+	
+}
+
+.iconSocial:hover {
+	color: rgb(119, 187, 255) !important;
+	cursor: pointer;
+}
+
+.iconPerfil {
+	color: var(--text-color-white);
+	cursor: pointer;
+}
+
+.iconPerfil:hover {
+	color:rgb(157, 206, 255);
+}
+
+.iconsStyle{
+	color: var(--text-color-blue) !important;
+}
+.customFooter {
+	background-color: var(--footer-color);
+	color: var(--text-color-white);
+	padding: 17px 0 10px 0;
+}
+
+.card-header {
+	background-color: rgb(243, 248, 254) !important;
+}
+
+/** Estilo Home **/
+.bgHome {
+	background: var(--bg-register-url) top/cover;
+	color: var(--text-color-white);
+}
+
+.promoStyle {
+	padding: 100px 0 100px 0 !important;
+}
+
+.modalTitle {
+	font-weight: 600;
+	font-size: 25px;
+	padding: 0 0 7px 0;
+}

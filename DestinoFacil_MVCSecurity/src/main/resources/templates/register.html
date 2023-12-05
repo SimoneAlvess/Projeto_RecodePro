@@ -1,0 +1,55 @@
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments/head :: head ('DestinoFácil | Registrar-se')}"></head>
+
+<body class="bgRegisterLogin">
+	<main>
+		<section class="area-register">
+			<div class="register shadow">
+				<div class="my-4">
+					<h3>Registre-se</h3>
+				</div>
+				<div th:if="${param.success}" class="alert alert-info">
+					<small>Registro realizado com sucesso!</small>
+				</div>
+				<!-- Início Form Cadastrar -->
+				<form method="post" role="form" th:action="@{/register/save}" th:object="${cliente}">
+					<div class="my-2 input-container">
+						<label for="nome"> Nome</label>
+						<i class="bi bi-person-circle fs-5"></i>
+						<input class="form-control formStyle" type="text" id="nome" name="nome" th:field="*{nome}"
+							placeholder="Nome" autofocus />
+						<small th:if="${#fields.hasErrors('nome')}" class="text-danger" th:text="${#fields.errors('nome')}"></small>
+					</div>
+
+					<div class="mb-2 input-container">
+						<label for="email">Email</label>
+						<i class="bi bi-envelope fs-5"></i>
+						<input class="form-control formStyle" type="email" id="email" name="email" th:field="*{email}"
+							placeholder="Email" autofocus />
+						<small th:if="${#fields.hasErrors('email')}" class="text-danger" th:text="${#fields.errors('email')}"></small>
+					</div>
+
+					<div class="mb-3 input-container">
+						<label for="senha">Senha</label>
+						<i class="bi bi-lock-fill fs-5"></i>
+						<input class="form-control formStyle" type="password" id="senha" name="senha"
+							th:field="*{senha}" placeholder="Senha" autofocus />
+						<small th:if="${#fields.hasErrors('senha')}" class="text-danger" th:text="${#fields.errors('senha')}"></small>
+					</div>
+
+					<div class="mb-3 mt-2 d-grid gap-2">
+						<button class="btn btnGroupThree" type="submit">Registrar-se</button>
+						<small class="text-center">
+							Já tem uma conta?
+							<a th:href="@{/login}" class="text-decoration-none">Login</a>
+						</small>
+					</div>
+				</form>
+				<!-- Fim Form Cadastrar -->
+			</div>
+		</section>
+	</main>
+</body>
+
+</html>

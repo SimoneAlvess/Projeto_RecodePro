@@ -1,0 +1,67 @@
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments/head :: head ('DestinoFácil | Destinos')}"></head>
+
+<body>
+	<!-- NavBar -->
+	<nav th:replace="~{fragments/navbar :: navbar}"></nav>
+	<main class="container">
+		<section class="py-5">
+			<div class="card shadow border-0">
+				<form th:object="${destinoDto}" method="post">
+					<input type="hidden" th:field="*{idDestino}" />
+					<div class="mb-3">
+						<input class="form-control" type="text" id="destino" th:field="*{destino}" placeholder="Destino"
+							autofocus />
+						<small th:if="${#fields.hasErrors('destino')}" class="text-danger"
+							th:text="${#fields.errors('destino')}"></small>
+					</div>
+
+					<div class="mb-3">
+						<input class="form-control" type="number" id="preco" th:field="*{preco}" placeholder="Preço"
+							autofocus />
+						<small th:if="${#fields.hasErrors('preco')}" class="text-danger"
+							th:text="${#fields.errors('preco')}"></small>
+					</div>
+
+					<div class="mb-3">
+						<select class="form-select" id="transporte" th:field="*{transporte}" autofocus>
+							<option value="">Escolha forma de transporte</option>
+							<option value="Aéreo">Aéreo</option>
+							<option value="Rodoviário">Rodoviário</option>
+						</select>
+						<small th:if="${#fields.hasErrors('transporte')}" class="text-danger"
+							th:text="${#fields.errors('transporte')}"></small>
+					</div>
+
+					<div class="mb-3">
+						<select class="form-select" id="promocao" th:field="*{promocao}">
+							<option value="">Escolha uma promoção</option>
+							<option th:each="promo : ${promocao}" th:value="${promo.idPromocao}">
+								Pacote: <span th:text="${promo.pacote}"></span> - Desconto: <span
+									th:text="${promo.desconto}"></span>%
+							</option>
+						</select>
+						<small th:if="${#fields.hasErrors('promocao')}" class="text-danger"
+							th:text="${#fields.errors('promocao')}"></small>
+					</div>
+
+					<div class="d-flex gap-2">
+						<button type="submit" class="btn btn-primary">Cadastrar</button>
+						<a href="/destinos" class="btn btn-danger">Cancelar</a>
+					</div>
+
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<!-- rodapé -->
+	<footer th:replace="~{fragments/footer :: footer}"></footer>
+	<!-- Javascript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

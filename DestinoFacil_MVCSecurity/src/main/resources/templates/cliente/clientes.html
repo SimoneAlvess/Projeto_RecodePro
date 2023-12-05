@@ -1,0 +1,59 @@
+<html lang="pt-br">
+
+<head th:replace="~{fragments/head :: head ('DestinoFácil | Clientes')}"></head>
+
+<body>
+	<!-- NavBar -->
+	<nav th:replace="~{fragments/navbar :: navbar}"></nav>
+	<main class="container">
+		<section class="py-5">
+			<div class="card shadow border-0">
+				<div class="card-header p-4 border-0 d-flex my-auto">
+					<i class="bi bi-people-fill fs-3 me-2 iconsStyle"></i>
+					<h5>Clientes</h5>
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table table-hover table-borderless">
+							<thead>
+								<tr>
+									<th scope="col">ID</th>
+									<th scope="col">Nome</th>
+									<th scope="col">E-mail</th>
+									<th scope="col">Opções</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="cliente : ${clientes}">
+									<td th:text="${cliente.id}"></td>
+									<td th:text="${cliente.nome}"></td>
+									<td th:text="${cliente.email}"></td>
+									<td class="d-flex gap-2">
+										<a class="btn btn-primary d-flex align-items-center" title="Editar">
+											<i class="bi bi-pencil-square me-1"></i>
+											Editar
+										</a>
+										<a class="btn btn-danger d-flex align-items-center" title="Excluir">
+											<i class="bi bi-trash3 me-1"></i>
+											Excluir
+										</a>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- rodapé -->
+	<footer th:replace="~{fragments/footer :: footer}"></footer>
+	<!-- Javascript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
