@@ -39,17 +39,26 @@ public class ClienteServiceImpl implements ClienteService {
 	@Override
 	public List<ClienteDto> findAllClientes() {
 		List<Cliente> clientes = clienteRepository.findAll();
-		return clientes.stream()
-				.map((cliente) -> mapToClienteDto(cliente))
-				.collect(Collectors.toList());
+		return clientes.stream().map((cliente) -> mapToClienteDto(cliente)).collect(Collectors.toList());
 	}
 
 	private ClienteDto mapToClienteDto(Cliente cliente) {
 		ClienteDto clienteDto = new ClienteDto();
 		clienteDto.setId(cliente.getId());
-	    clienteDto.setNome(cliente.getNome());
-	    clienteDto.setSenha(cliente.getSenha());
+		clienteDto.setNome(cliente.getNome());
+		clienteDto.setSenha(cliente.getSenha());
 		clienteDto.setEmail(cliente.getEmail());
 		return clienteDto;
 	}
+
+	@Override
+	public void deletarCliente(Long id) {
+		clienteRepository.deleteById(id);
+	}
+
+	@Override
+	public Cliente findById(Long id) {
+		return clienteRepository.findById(id).orElse(null);
+	}
+
 }

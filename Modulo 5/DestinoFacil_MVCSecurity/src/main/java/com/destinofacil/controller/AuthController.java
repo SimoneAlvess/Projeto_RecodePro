@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.destinofacil.dto.ClienteDto;
@@ -21,43 +22,57 @@ public class AuthController {
 
 	@Autowired
 	private ClienteService clienteService;
-	   
-	   @GetMapping("/login")
-	    public String login(){
-	        return "login";
-	    }
-	   
-	   @GetMapping("/register")
-	    public String showRegistrationForm(Model model){
-	        ClienteDto cliente = new ClienteDto();
-	        model.addAttribute("cliente", cliente);
-	        return "register";
-	    }
-	   
-	   @PostMapping("/register/save")
-	    public String registration(@Valid @ModelAttribute("cliente") ClienteDto clienteDto,
-	                               BindingResult result,
-	                               Model model){
-	        Cliente existingCliente = clienteService.findClienteByEmail(clienteDto.getEmail());
 
-	        if(existingCliente != null && existingCliente.getEmail() != null && !existingCliente.getEmail().isEmpty()){
-	            result.rejectValue("email", null,
-	                    "Já existe uma conta cadastrada com o mesmo email");
-	        }
+	@GetMapping("/login")
+	public String login() {
+		return "login/login";
+	}
 
-	        if(result.hasErrors()){
-	            model.addAttribute("cliente", clienteDto);
-	            return "register";
-	        }
+	@GetMapping("/contato")
+	public String contato() {
+		return "contato";
+	}
 
-	        clienteService.saveCliente(clienteDto);
-	        return "redirect:/register?success";
-	    }
-	    
-	   @GetMapping("/clientes")
-	    public String clientes(Model model){
-	        List<ClienteDto> clientes = clienteService.findAllClientes();
-	        model.addAttribute("clientes", clientes);
-	        return "cliente/clientes";
-	    }
+	@GetMapping("/destino")
+	public String destino() {
+		return "destino";
+	}
+
+	@GetMapping("/clientes")
+	public String clientes(Model model) {
+		List<ClienteDto> clientes = clienteService.findAllClientes();
+		model.addAttribute("clientes", clientes);
+		return "cliente/clientes";
+	}
+
+	@GetMapping("/register")
+	public String showRegistrationForm(Model model) {
+		ClienteDto cliente = new ClienteDto();
+		model.addAttribute("cliente", cliente);
+		return "registro/register";
+	}
+
+	@PostMapping("/register/save")
+	public String registration(@Valid @ModelAttribute("cliente") ClienteDto clienteDto, BindingResult result,
+			Model model) {
+		Cliente existingCliente = clienteService.findClienteByEmail(clienteDto.getEmail());
+
+		if (existingCliente != null && existingCliente.getEmail() != null && !existingCliente.getEmail().isEmpty()) {
+			result.rejectValue("email", null, "Já existe uma conta cadastrada com o mesmo email");
+		}
+
+		if (result.hasErrors()) {
+			model.addAttribute("cliente", clienteDto);
+			return "registro/register";
+		}
+
+		clienteService.saveCliente(clienteDto);
+		return "redirect:/register?success";
+	}
+
+	@GetMapping("clientes/{id}/excluir")
+	public String excluir(@PathVariable Long id) {
+		clienteService.deletarCliente(id);
+		return "redirect:/clientes";
+	}
 }

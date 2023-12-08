@@ -34,7 +34,7 @@ public class DestinoController {
 
 		return modelAndView;
 	}
-
+	
 	@GetMapping("/cadastrar")
 	public ModelAndView cadastrar() {
 		ModelAndView modelAndView = new ModelAndView("destino/formulario");
@@ -45,35 +45,40 @@ public class DestinoController {
 
 	@PostMapping("/cadastrar")
 	public String cadastrar(@ModelAttribute @Valid DestinoDto destinoDto, BindingResult result, Model model) {
-	    if (result.hasErrors()) {
-	        model.addAttribute("destinoDto", destinoDto);
-	        model.addAttribute("promocao", promocaoRepository.findAll());
-	        return "destino/formulario";
-	    }
+		if (result.hasErrors()) {
+			model.addAttribute("destinoDto", destinoDto);
+			model.addAttribute("promocao", promocaoRepository.findAll());
+			return "destino/formulario";
+		}
 
-	    destinoService.salvarDestino(destinoDto);
-	    return "redirect:/destinos";
+		destinoService.salvarDestino(destinoDto);
+		return "redirect:/destinos";
 	}
 
-
-	
 	@GetMapping("/{id}/editar")
-    public ModelAndView editar(@PathVariable Long id) {
-        ModelAndView modelAndView = new ModelAndView("destino/editar");
-        modelAndView.addObject("destino", destinoService.findById(id));
-        modelAndView.addObject("promocao", promocaoRepository.findAll());
-        return modelAndView;
-    }
+	public ModelAndView editar(@PathVariable Long id) {
+		ModelAndView modelAndView = new ModelAndView("destino/formulario");
+		modelAndView.addObject("destinoDto", destinoService.findById(id));
+		modelAndView.addObject("promocao", promocaoRepository.findAll());
+		return modelAndView;
+	}
 
-    @PostMapping("/{id}/editar")
-    public String editar(@PathVariable Long id, @ModelAttribute DestinoDto destinoDto) {
-        destinoService.editarDestino(id, destinoDto);
-        return "redirect:/destinos";
-    }
+	@PostMapping("/{id}/editar")
+	public String editar(@PathVariable Long id, @ModelAttribute @Valid DestinoDto destinoDto, BindingResult result,
+			Model model) {
+		if (result.hasErrors()) {
+			model.addAttribute("destinoDto", destinoDto);
+			model.addAttribute("promocao", promocaoRepository.findAll());
+			return "destino/formulario";
+		}
 
-    @GetMapping("/{id}/excluir")
-    public String excluir(@PathVariable Long id) {
-        destinoService.deletarDestino(id);
-        return "redirect:/destinos";
-    }
+		destinoService.editarDestino(id, destinoDto);
+		return "redirect:/destinos";
+	}
+
+	@GetMapping("/{id}/excluir")
+	public String excluir(@PathVariable Long id) {
+		destinoService.deletarDestino(id);
+		return "redirect:/destinos";
+	}
 }

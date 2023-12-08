@@ -31,6 +31,7 @@ public class DestinoServiceImpl implements DestinoService {
 		destinoDto.setPreco(destino.getPreco());
 		destinoDto.setPrecoTotal(destino.getPrecoTotal());
 		destinoDto.setPromocao(destino.getPromocao());
+		destinoDto.setUrlImagem(destino.getUrlImagem());
 		return destinoDto;
 	}
 
@@ -41,6 +42,7 @@ public class DestinoServiceImpl implements DestinoService {
 	    destino.setTransporte(destinoDto.getTransporte());
 	    destino.setPreco(destinoDto.getPreco());
 	    destino.setPromocao(destinoDto.getPromocao());
+	    destino.setUrlImagem(destinoDto.getUrlImagem());
 
 	    if (destinoDto.getPromocao() != null) {
 	        int desconto = destinoDto.getPromocao().getDesconto();
@@ -63,6 +65,7 @@ public class DestinoServiceImpl implements DestinoService {
 			destino.setTransporte(destinoDto.getTransporte());
 			destino.setPreco(destinoDto.getPreco());
 			destino.setPromocao(destinoDto.getPromocao());
+			destino.setUrlImagem(destinoDto.getUrlImagem());
 
 			if (destinoDto.getPromocao() != null) {
 				int desconto = destinoDto.getPromocao().getDesconto();

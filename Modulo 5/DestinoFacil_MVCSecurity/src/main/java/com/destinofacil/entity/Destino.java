@@ -38,6 +38,9 @@ public class Destino implements Serializable {
 
 	@Column(nullable = false, length = 128)
 	private String transporte;
+	
+	@Column(nullable = false, name = "url_imagem")
+	private String urlImagem;
 
 	@Column(nullable = false)
 	@NumberFormat(style = Style.CURRENCY, pattern = "#,##0.00")

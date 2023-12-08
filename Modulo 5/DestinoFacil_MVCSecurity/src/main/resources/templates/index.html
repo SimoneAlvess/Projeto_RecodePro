@@ -1,14 +1,11 @@
-<html lang="pt-br">
+<html th:replace="~{layout :: layout ('Home', ~{::main}, ~{::styles}, ~{::script})}">
 
-<head th:replace="~{fragments/head :: head ('DestinoFácil')}"></head>
+<head></head>
 
 <body>
-	<!-- NavBar -->
-	<nav th:replace="~{fragments/navbar :: navbar}"></nav>
-
+	
 	<!-- Início Corpo página -->
 	<main>
-
 		<section>
 			<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
 				<div class="carousel-indicators">
@@ -39,7 +36,7 @@
 								<h1>Encontre seu destino dos sonhos</h1>
 								<p class="lead">Confira nossos destinos e realize a tão esperada viagem dos seus sonhos.
 								</p>
-								<p><a class="btn btn-lg btnGroup" href="./destino">Confira Já</a></p>
+								<p><a class="btn btn-lg btnGroup" href="/destinos">Confira Já</a></p>
 							</div>
 						</div>
 					</div>
@@ -49,7 +46,7 @@
 							<div class="carousel-caption text-end">
 								<h1>Ofertas que cabem no seu bolso</h1>
 								<p class="lead">Não deixe de conferir nossas ofertas especiais.</p>
-								<p><a class="btn btn-lg btnGroup" href="./promocao">Confira Já</a></p>
+								<p><a class="btn btn-lg btnGroup" href="/promocoes">Confira Já</a></p>
 							</div>
 						</div>
 					</div>
@@ -316,17 +313,9 @@
 				</div>
 			</div>
 		</section>
-
 	</main>
 	<!-- Fim Corpo página -->
 
-	<!-- rodapé -->
-	<footer th:replace="~{fragments/footer :: footer}"></footer>
-
-	<!-- Javascript -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-		crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -21,5 +21,7 @@ public class DestinoDto {
 	private Promocao promocao;
 	@NotEmpty (message = "O transporte não deve ser vazio!")
 	private String transporte;
+	@NotEmpty (message = "A imagem não deve ser vazia!")
+	private String urlImagem;
 
 }
